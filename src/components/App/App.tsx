@@ -1,11 +1,13 @@
 import Header from '../Header/Header';
+import LeftBlock from '../LeftBlock/LeftBlock';
 import './App.css';
 
 function App() {
   return (
-    <body>
+    <>
       <Header />
-    </body>
+      <LeftBlock />
+    </>
   );
 }
 
