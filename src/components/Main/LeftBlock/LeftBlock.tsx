@@ -3,9 +3,9 @@ import './LeftBlock.css';
 function LeftBlock() {
   return (
     <>
-    <div className="LeftBlock">
-    блаблабла
-    </div>
+      <div className="LeftBlock">
+        Левый блок
+      </div>
 
     </>
   );
