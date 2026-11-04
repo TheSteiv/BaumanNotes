@@ -1,12 +1,11 @@
 import './MiddleBlock.css'
+import TodoList from './TodoList/TodoList';
 
 function MiddleBlock() {
     return (
-        <>
             <div className="MiddleBlock">
-                Центральный блок
+                <TodoList />
             </div>
-        </>
     );
 }
 
