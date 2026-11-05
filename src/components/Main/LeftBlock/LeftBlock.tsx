@@ -9,7 +9,7 @@ function LeftBlock() {
     <>
       <div className="LeftBlock">
         Левый блок
-        <Calendar mode="single" className="rounded-lg border" />
+        <Calendar mode="single" className="w-full min-w-0 rounded-lg border" />
       </div>
 
     </>

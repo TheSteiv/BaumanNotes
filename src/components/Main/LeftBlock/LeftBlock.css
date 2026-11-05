@@ -1,8 +1,8 @@
 .LeftBlock{
     background-color: rgb(3, 29, 1);
-    width:200px;
+    width:300px;
     height: 400px;
     margin-left: 30px;
     border-radius: 10px;
-    color: white;
+    padding: 10px;
 }
