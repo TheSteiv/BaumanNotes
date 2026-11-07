@@ -7,8 +7,8 @@ function Header() {
                 <h2>Название проекта</h2>
             </div>
             <div className="headerButtons">
-                <Button variant="outline" size="icon">На</Button>
-                <Button variant="destructive" size="icon">Ав</Button>
+                <Button variant="outline" size="icon" className="settings_button">На</Button>
+                <Button variant="destructive" size="icon" className="profile_button">Ав</Button>
             </div>
         </header>
     )

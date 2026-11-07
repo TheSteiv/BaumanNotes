@@ -1,5 +1,5 @@
 .main-header {
-  background-color: #1a1a1a;
+  background-color: #252a34;
   padding: 20px;
   display: flex;
   align-items: center;
@@ -10,7 +10,7 @@
 }
 
 .main-header h2 {
-  color: #00adb5;
+  color: #fff;
   margin: 0;
   font-size: 25px;
   font-family: Arial, sans-serif;
@@ -20,4 +20,12 @@
 .headerButtons{
   display:flex;
   gap:30px;
+}
+
+.profile_button{
+  background-color: #ff2e63;
+}
+
+.settings_button{
+  background-color: #eaeaea;
 }

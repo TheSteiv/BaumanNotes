@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import "./TodoItem.css"
 import {
   Item,
   ItemActions,
@@ -16,7 +17,7 @@ function TodoItem({ title, completed }: TodoItemProps) {
     console.log("props: ", { title, completed })
     return (
         <>
-            <Item className="bg-gray-500">
+            <Item className="bg-gray-500 TodoItem">
                 <ItemContent>
                     <ItemTitle className="text-white">{title}</ItemTitle>
                     <ItemDescription>Это описание задачи</ItemDescription>
