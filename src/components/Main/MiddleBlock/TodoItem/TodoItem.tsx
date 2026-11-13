@@ -9,12 +9,13 @@ import {
 } from "@/components/ui/item"
 
 type TodoItemProps = {
+    id: number,
     title: string,
     completed: boolean,
 };
 
-function TodoItem({ title, completed }: TodoItemProps) {
-    console.log("props: ", { title, completed })
+function TodoItem({id, title, completed }: TodoItemProps) {
+    console.log("props: ", { id, title, completed })
     return (
         <>
             <Item
