@@ -12,9 +12,10 @@ type TodoItemProps = {
     id: number,
     title: string,
     completed: boolean,
+    changeCompletedTask: (id: number) => void
 };
 
-function TodoItem({id, title, completed }: TodoItemProps) {
+function TodoItem({id, title, completed, changeCompletedTask }: TodoItemProps) {
     console.log("props: ", { id, title, completed })
     return (
         <>
@@ -36,6 +37,7 @@ function TodoItem({id, title, completed }: TodoItemProps) {
                     <Button
                         size="icon"
                         className="size-8 rounded-md border border-zinc-700 bg-zinc-800 text-zinc-200 transition-colors hover:border-zinc-600 hover:bg-zinc-700 hover:text-white group-data-[completed=true]/item:bg-zinc-800/50 group-data-[completed=true]/item:text-zinc-400"
+                        onClick={() => changeCompletedTask(id)}
                     >
                         {completed ? "✓" : "+"}
                     </Button>

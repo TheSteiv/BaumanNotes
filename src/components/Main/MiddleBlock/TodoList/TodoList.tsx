@@ -2,9 +2,10 @@ import TodoItem from "../TodoItem/TodoItem";
 import "./TodoList.css"
 type TodoListProps = {
     tasks: any[],
+    changeCompletedTask: (id: number) => void
 };
 
-function TodoList({tasks}:TodoListProps) {
+function TodoList({tasks, changeCompletedTask}:TodoListProps) {
     const hasTasks = true
     if (!hasTasks) {
         return (
@@ -18,7 +19,7 @@ function TodoList({tasks}:TodoListProps) {
             <h2>Список задач</h2>
             <ul>
                 {tasks.map((task) => (
-                    <TodoItem id={task.id} title={task.title} completed={task.completed}/>
+                    <TodoItem id={task.id} title={task.title} completed={task.completed} changeCompletedTask={changeCompletedTask}/>
                 ))}
             </ul>
             {/* <TodoItem id={1} title="Задача 1 через props" completed={false} />
