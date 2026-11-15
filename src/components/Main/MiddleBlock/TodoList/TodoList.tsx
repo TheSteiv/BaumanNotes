@@ -2,7 +2,7 @@ import TodoItem from "../TodoItem/TodoItem";
 import "./TodoList.css"
 type TodoListProps = {
     tasks: any[],
-    changeCompletedTask: (id: number) => void
+    changeCompletedTask: (id: number, completed: boolean) => void
 };
 
 function TodoList({tasks, changeCompletedTask}:TodoListProps) {
