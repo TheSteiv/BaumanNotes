@@ -1,31 +1,39 @@
-import TodoItem from "../TodoItem/TodoItem";
+import TodoItem from "../TodoItem/TodoItem"
 import "./TodoList.css"
-type TodoListProps = {
-    tasks: any[],
-    changeCompletedTask: (id: number, completed: boolean) => void
-};
 
-function TodoList({tasks, changeCompletedTask}:TodoListProps) {
-    const hasTasks = true
-    if (!hasTasks) {
-        return (
-            <div>
-                Задач нету
-            </div>
-        );
-    }
-    return (
-        <>
-            <h2>Список задач</h2>
-            <ul>
-                {tasks.map((task) => (
-                    <TodoItem id={task.id} title={task.title} completed={task.completed} changeCompletedTask={changeCompletedTask}/>
-                ))}
-            </ul>
-            {/* <TodoItem id={1} title="Задача 1 через props" completed={false} />
-            <TodoItem id = {2} title="Задача 2 через props" completed={true} /> */}
-        </>
-    );
+type Task = {
+  id: number
+  title: string
+  completed: boolean
+}
+
+type TodoListProps = {
+  tasks: Task[]
+  changeCompletedTask: (id: number, completed: boolean) => void
+}
+
+function TodoList({ tasks, changeCompletedTask }: TodoListProps) {
+  if (tasks.length === 0) {
+    return <div className="text-zinc-400">Задач нету</div>
+  }
+
+  return (
+    <div className="flex flex-col gap-3">
+      <h2 className="text-lg font-semibold text-zinc-100">Список задач</h2>
+      <ul className="flex flex-col gap-2">
+        {tasks.map((task) => (
+          <li key={task.id}>
+            <TodoItem
+              id={task.id}
+              title={task.title}
+              completed={task.completed}
+              changeCompletedTask={changeCompletedTask}
+            />
+          </li>
+        ))}
+      </ul>
+    </div>
+  )
 }
 
 export default TodoList
