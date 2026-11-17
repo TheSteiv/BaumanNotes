@@ -29,3 +29,7 @@
 .settings_button{
   background-color: #eaeaea;
 }
+
+.main-header Link:hover{
+  cursor: pointer;
+}
