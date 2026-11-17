@@ -4,7 +4,11 @@ function RightBlock() {
         <>
             <div className="RightBlock">
                 Правый блок
+                <div className="day_shedule_block">
+                    Здесь будет расписание дня...
+                </div>
             </div>
+
         </>
     );
 }
