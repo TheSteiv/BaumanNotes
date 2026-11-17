@@ -20,7 +20,7 @@ function TodoItem({id, title, completed, changeCompletedTask }: TodoItemProps) {
         <>
             <Item
                 data-completed={completed}
-                className="border border-zinc-700/80 bg-zinc-900 transition-colors hover:border-zinc-400 data-[completed=true]:opacity-60"
+                className=" item border border-zinc-700/80 bg-zinc-900 transition-colors hover:border-zinc-400 data-[completed=true]:opacity-60"
             >
                 <ItemContent>
                     <ItemTitle className="text-base text-zinc-100 group-data-[completed=true]/item:text-zinc-400 group-data-[completed=true]/item:line-through">

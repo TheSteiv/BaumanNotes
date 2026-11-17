@@ -7,8 +7,8 @@
     padding: 10px;
     color: #fff;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 .calendar{
@@ -18,4 +18,12 @@
     margin-top: 10px;
     height: 240px;
     width: 260px;
+}
+
+.groups_block{
+    background-color: #000;
+    width: 260px;
+    height: 260px;
+    margin-top: 10px;
+    border-radius: 10px;
 }
