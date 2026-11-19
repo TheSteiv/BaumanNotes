@@ -2,9 +2,13 @@ import TodoItem from "../TodoItem/TodoItem"
 import "./TodoList.css"
 
 type Task = {
-  id: number
-  title: string
-  completed: boolean
+  id: number,
+  title: string,
+  completed: boolean,
+  day: number,
+  month: number,
+  year: number,
+  time: number,
 }
 
 type TodoListProps = {
@@ -24,9 +28,7 @@ function TodoList({ tasks, changeCompletedTask }: TodoListProps) {
         {tasks.map((task) => (
           <li key={task.id}>
             <TodoItem
-              id={task.id}
-              title={task.title}
-              completed={task.completed}
+              task={task}
               changeCompletedTask={changeCompletedTask}
             />
           </li>

@@ -6,13 +6,22 @@ type Task = {
     id: number,
     title: string,
     completed: boolean,
-};
+    year: number,
+    month: number,
+    day: number,
+    time: number,
+}
 
 const defaultTasks: Task[] = [
-    { id: 1, title: "Задача 1 через map", completed: false },
-    { id: 2, title: "Задача 2 через map", completed: false },
-    { id: 3, title: "Задача 3 через map", completed: false }
-];
+    { id: 1, title: "Задача 1", completed: false, year: 33, month: 12, day: 11, time: 14 },
+    { id: 2, title: "Задача 2", completed: false, year: 13, month: 12, day: 11, time: 14 },
+    { id: 3, title: "Задача 3", completed: false, year: 13, month: 12, day: 21, time: 14 },
+].toSorted((a, b) =>
+    (a.year - b.year) ||
+    (a.month - b.month) ||
+    (a.day - b.day) ||
+    (a.time - b.time)
+);
 
 function MiddleBlock() {
     const [tasks, setTasks] = useState<Task[]>(() => {
@@ -27,10 +36,15 @@ function MiddleBlock() {
                     return { ...task, completed: !completed }
                 }
                 return task;
-            })
+            }).toSorted((a, b) =>
+                (a.year - b.year) ||
+                (a.month - b.month) ||
+                (a.day - b.day) ||
+                (a.time - b.time)
+            )
         )
     }
-    
+
     useEffect(() => {
         console.log("Сохраняем данные в хранилище:", tasks);
         localStorage.setItem('tasks', JSON.stringify(tasks));
