@@ -1,5 +1,5 @@
 .MiddleBlock{
-    background-color: #252a34;
+    background-color: var(--middle-grey-dark);
     width:800px;
     height: 100%;
     border-radius: 10px;

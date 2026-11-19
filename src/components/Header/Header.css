@@ -1,5 +1,5 @@
 .main-header {
-  background-color: #252a34;
+  background-color: var(--middle-grey-dark);
   padding: 20px;
   display: flex;
   align-items: center;
@@ -23,11 +23,13 @@
 }
 
 .profile_button{
-  background-color: #ff2e63;
+  background-color: var(--bright-color-dark);
 }
 
 .settings_button{
-  background-color: #eaeaea;
+  background-color: var(--dark-grey-dark);
+  border: none;
+  color:white;
 }
 
 .main-header Link:hover{

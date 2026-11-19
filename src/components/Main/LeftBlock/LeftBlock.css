@@ -1,5 +1,7 @@
+
+
 .LeftBlock{
-    background-color: #252a34;
+    background-color: var(--middle-grey-dark);
     width:300px;
     height: 100%;
     margin-left: 5px;
@@ -12,7 +14,7 @@
 }
 
 .calendar{
-    background-color: #000;
+    background-color: var(--dark-grey-dark);
     color: #fff;
     padding: 5px;
     margin-top: 10px;
@@ -21,10 +23,40 @@
 }
 
 .groups_block{
-    background-color: #000;
+    background-color: var(--dark-grey-dark);
     width: 260px;
     height: 260px;
     margin-top: 10px;
     border-radius: 10px;
     padding: 5px;
+}
+
+.calendar [data-selected-single="true"], .calendar .rdp-selected button {
+  background-color: var(--middle-grey-dark) !important;
+  color: #ffffff !important;
+  border: none;
+
+}
+
+.calendar .rdp-today button, .calendar [data-today="true"] button {
+  color: #ffffff !important;
+  border: 2px solid var(--middle-grey-dark);
+}
+
+.calendar .rdp-today button:hover, .calendar [data-today="true"] button:hover {
+  background-color: #fff;
+}
+
+.calendar .rdp-today{
+    background-color: var(--dark-grey-dark);
+}
+
+.card{
+    background-color:var(--dark-grey-dark);
+    border: none;
+}
+
+.rdp-button_next, .rdp-button_previous{
+    width: 20px;
+    height: 20px;
 }
