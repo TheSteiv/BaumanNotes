@@ -25,14 +25,31 @@ function TodoList({ tasks, changeCompletedTask }: TodoListProps) {
     <div className="flex flex-col gap-3">
       <h2 className="text-lg font-semibold text-zinc-100">Список задач</h2>
       <ul className="flex flex-col gap-2">
-        {tasks.map((task) => (
-          <li key={task.id}>
-            <TodoItem
-              task={task}
-              changeCompletedTask={changeCompletedTask}
-            />
-          </li>
-        ))}
+        {tasks.map((task, index) => {
+          const prevTask = tasks[index - 1]
+
+          const isNewDate =
+            !prevTask ||
+            prevTask.year !== task.year ||
+            prevTask.month !== task.month ||
+            prevTask.day !== task.day
+
+          const formattedDate = `${String(task.day).padStart(2, "0")}.${String(task.month).padStart(2, "0")}.${task.year}`
+
+          return (
+            <li key={task.id}>
+              {isNewDate && (
+                <h3 className="mt-2 mb-1 text-sm font-medium text-zinc-400">
+                  {formattedDate}
+                </h3>
+              )}
+              <TodoItem
+                task={task}
+                changeCompletedTask={changeCompletedTask}
+              />
+            </li>
+          )
+        })}
       </ul>
     </div>
   )

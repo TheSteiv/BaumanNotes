@@ -13,9 +13,9 @@ type Task = {
 }
 
 const defaultTasks: Task[] = [
-    { id: 1, title: "Задача 1", completed: false, year: 33, month: 12, day: 11, time: 14 },
-    { id: 2, title: "Задача 2", completed: false, year: 13, month: 12, day: 11, time: 14 },
-    { id: 3, title: "Задача 3", completed: false, year: 13, month: 12, day: 21, time: 14 },
+    { id: 1, title: "Задача 1", completed: false, year: 2026, month: 6, day: 14, time: 14 },
+    { id: 2, title: "Задача 2", completed: false, year: 2026, month: 11, day: 26, time: 16 },
+    { id: 3, title: "Задача 3", completed: false, year: 2026, month: 11, day: 26, time: 14 },
 ].toSorted((a, b) =>
     (a.year - b.year) ||
     (a.month - b.month) ||
