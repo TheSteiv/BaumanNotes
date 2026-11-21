@@ -1,8 +1,15 @@
 import './LeftBlock.css';
 import * as React from "react"
 import { Calendar } from "@/components/ui/calendar"
+import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover"
 import { useState } from 'react';
+import { NewGroupForm } from './NewGroupForm/NewGroupForm';
 
 
 function LeftBlock() {
@@ -28,13 +35,22 @@ function LeftBlock() {
               modifiersClassNames={{
                 selected: "selected-day",
               }}
+              fixedWeeks 
             />
           </CardContent>
         </Card>
-    <h1>{date?.toDateString()}</h1>
+        <h1>{date?.toDateString()}</h1>
+
+
+
         <h2>Группы {}</h2>
         <div className="groups_block">
-          здесь будут отбражаться группы...
+          <Popover>
+            <PopoverTrigger render={<Button variant="outline" className="newGroupButton">Новая группа</Button>} />
+            <PopoverContent className="w-64 popover" align="start">
+              <NewGroupForm />
+            </PopoverContent>
+          </Popover>
         </div>
       </div>
 

@@ -18,8 +18,9 @@
     color: #fff;
     padding: 5px;
     margin-top: 10px;
-    height: 240px;
+    height: 280px;
     width: 260px;
+    border-radius: 10px;
 }
 
 .groups_block{
@@ -28,23 +29,26 @@
     height: 260px;
     margin-top: 10px;
     border-radius: 10px;
-    padding: 5px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .calendar [data-selected-single="true"], .calendar .rdp-selected button {
-  background-color: var(--middle-grey-dark) !important;
-  color: #ffffff !important;
+  background-color: var(--bright-color-dark) !important;
+  color: #000000 !important;
   border: none;
 
-}
+} 
 
 .calendar .rdp-today button, .calendar [data-today="true"] button {
   color: #ffffff !important;
-  border: 2px solid var(--middle-grey-dark);
+  border: 2px solid var(--bright-color-dark);
 }
 
 .calendar .rdp-today button:hover, .calendar [data-today="true"] button:hover {
-  background-color: #fff;
+  background-color: var(--bright-color-dark);
 }
 
 .calendar .rdp-today{
@@ -59,4 +63,29 @@
 .rdp-button_next, .rdp-button_previous{
     width: 20px;
     height: 20px;
+}
+
+
+.calendar .rdp-day:focus,
+.calendar [data-focused="true"] {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+
+
+.newGroupButton{
+    background-color: var(--bright-color-dark);
+    color: #000;
+    border: none;
+    width: 100px;
+}
+
+.popover{
+    background-color: var(--middle-grey-dark);
+    color: #fff;
+    padding: 15px;
+    border: 3px solid var(--dark-grey-dark);
+    width: 300px;
+    height: 185px;
 }

@@ -10,20 +10,26 @@
 }
 
 .main-header h2 {
-  color: #fff;
+  color: var(--bright-color-dark);
   margin: 0;
-  font-size: 25px;
+  font-size: 30px;
+  font-weight: 700;
   font-family: Arial, sans-serif;
 }
 
 
 .headerButtons{
   display:flex;
-  gap:30px;
+  gap:40px;
 }
 
+.headerButtons button{
+  width: 100px;
+  height: 50px;
+}
 .profile_button{
   background-color: var(--bright-color-dark);
+  color: black;
 }
 
 .settings_button{
@@ -32,6 +38,6 @@
   color:white;
 }
 
-.main-header Link:hover{
+Link:hover, button:hover{
   cursor: pointer;
 }

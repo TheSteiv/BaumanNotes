@@ -1,6 +1,7 @@
 .Main{
+    height: 650px;
     margin-top: 30px;
     display: flex;
     justify-content: space-between;
-    height: 650px;
+    gap:10px
 }
